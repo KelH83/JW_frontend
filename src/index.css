@@ -1,0 +1,132 @@
+body{
+  padding: 0px;
+  margin: 0px;
+  background-color: rgb(218, 217, 217);
+}
+
+header{
+  display: flex;
+}
+
+.school-logo{
+  width: 10%;
+  height: 50%;
+}
+
+header h1{
+  align-self: center;
+  margin: auto;
+  font-size: 3.5rem;
+}
+
+.footer{
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.students-container{
+    text-align: center;
+    margin: auto;
+}
+
+.students-individual{
+  font-size: 1.5em;
+  background-color: rgb(242, 242, 242);
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(64, 2, 105);
+    width: 50%
+}
+
+.student-info{
+  background-color: rgb(242, 242, 242);
+}
+
+.buttons{
+  background-color: brown;
+  color: white;
+  font-size: 0.75em;
+  border-radius: 8px;
+}
+
+.buttons:hover{
+  background-color: white;
+  color: brown;
+}
+
+.add-student{
+  margin: 10px 45%;
+  padding: 5px;
+  background-color: brown;
+  color: white;
+  font-size: 1.4rem;
+  border-radius: 8px;
+}
+
+.add-student:hover{
+  background-color: white;
+  color: brown;
+}
+
+.back-button{
+  margin: 10px 45%;
+  padding: 5px;
+  background-color: brown;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 8px;
+}
+
+.back-button:hover{
+  background-color: white;
+  color: brown;
+}
+
+/* ADD STUDENT */
+
+.add-new-student{
+  font-size: 2em;
+  text-align: center;
+}
+.add-student-form{
+  background-color: rgb(242, 242, 242);
+  width: 50vw;
+  margin: auto;
+  padding: 10px;
+  border-radius: 12px;
+  border: 2px black solid;
+}
+
+.add-student-form label{
+  font-size: 1.25em;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 30%;
+  
+}
+.add-student-form input{
+  font-size: 1.25em;
+  border-radius: 8px;
+  margin-left: 30%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.add-student-form button{
+  background-color:brown;
+  color: white;
+  font-size: 1.25em;
+  padding:8px;
+  width: 50%;
+  border-radius: 12px;
+  margin-left: 25%;
+}
+
+.add-student-form button:hover{
+  background-color: white;
+  color: brown;
+  transition: 0.3s;
+  transition-timing-function: linear;
+}
