@@ -5,13 +5,7 @@ import { collection,query, doc, getDocs, setDoc, getDoc } from "firebase/firesto
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBnqjiGihs4WOhgyvTe0ORJIdXpYeZmpcU",
-  authDomain: "jwbackend-36662.firebaseapp.com",
-  projectId: "jwbackend-36662",
-  storageBucket: "jwbackend-36662.appspot.com",
-  messagingSenderId: "926486188178",
-  appId: "1:926486188178:web:4d55963a673cb2ceee164b",
-  measurementId: "G-JRVG2SDF51"
+  
 };
 
 
