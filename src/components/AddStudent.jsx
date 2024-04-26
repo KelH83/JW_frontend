@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import {addStudent} from '../firebase'
 import { useState, useEffect } from 'react'
 
@@ -9,6 +9,7 @@ const AddStudent = () => {
     const[studentEmail, setStudentEmail] = useState('')
     const[studentAddress, setStudentAddress] = useState('')
     const [disabledPostButton, setDisabledPostButton] = useState(false);
+    const navigate = useNavigate();
 
      const handleSubmit = (event) =>{
         setDisabledPostButton(true)
@@ -24,6 +25,7 @@ const AddStudent = () => {
         .then(()=>{
         alert("Student successfully added")
         setDisabledPostButton(false)
+        navigate("/");
         })
         .catch((error) =>{
             setErrorMsg(error)
@@ -33,7 +35,6 @@ const AddStudent = () => {
         })
      }
        
-
 
     if(errorMsg){
         return (

@@ -130,3 +130,45 @@ header h1{
   transition: 0.3s;
   transition-timing-function: linear;
 }
+/* AMEND STUDENT MODAL */
+
+.modal{
+  position: absolute;
+  top: 18%;
+  left: 18%;
+  background-color: brown;
+  width: 55vw;
+  height: 60vh;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.amend-student-form{
+  background-color: brown;
+  font-size: 1em;
+}
+
+.amend-student-form input{
+  font-size: 0.9em;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.modal-buttons{
+  background-color: white;
+  color: brown;
+  font-size: 0.75em;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.modal-buttons:hover{
+  background-color: black;
+  color: white;
+}

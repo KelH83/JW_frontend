@@ -5,7 +5,6 @@ import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 
 const Students = () => {
 
@@ -14,7 +13,6 @@ const Students = () => {
     const [errorMsg, setErrorMsg] = useState(null)
 
     useEffect(() => {
-        console.log("Use effect in students")
         getStudents()
         .then((returnedData) => {
             setStudents(returnedData)

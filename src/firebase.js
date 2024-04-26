@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { collection,query, doc, getDocs, setDoc, getDoc } from "firebase/firestore";
+import { collection,query, doc, getDocs, setDoc, getDoc, deleteDoc, updateDoc } from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -50,11 +50,15 @@ export async function addStudent(data){
     address: data.address
   });
 }
-async function amendStudent(studentId){
-
+export async function deleteStudent(studentId){
+  await deleteDoc(doc(db, "students", studentId));
 }
 
-async function deleteStudent(studentId){
-
+export async function amendStudent(student, studentId){
+  await updateDoc(doc(db, "students", studentId), {
+    name: student.name,
+    dateOfBirth: student.dateOfBirth,
+    email: student.email,
+    address: student.address
+  });
 }
-
