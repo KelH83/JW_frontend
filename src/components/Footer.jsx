@@ -5,7 +5,7 @@ const Footer = () => {
 
     return(
         <>
-        <p className='footer'>©Copyright Wilson College <span id='copyright'>{year}</span></p>
+        <p className='footer'>© Copyright Wilson College <span id='copyright'>{year}</span></p>
         </>
     )
 }

@@ -14,7 +14,6 @@ const Students = () => {
     const [errorMsg, setErrorMsg] = useState(null)
 
     useEffect(() => {
-        console.log("Use effect in students")
         getStudents()
         .then((returnedData) => {
             setStudents(returnedData)
