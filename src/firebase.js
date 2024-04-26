@@ -68,5 +68,3 @@ export async function amendStudent(student, studentId){
     address: student.address
   });
 }
-
-

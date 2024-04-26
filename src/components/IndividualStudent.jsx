@@ -105,7 +105,6 @@ const IndividualStudent = () => {
         </div>
     }
 
-
     if(errorMsg){
         return (
             <p>{errorMsg}</p>

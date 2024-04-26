@@ -36,7 +36,6 @@ const AddStudent = () => {
      }
        
 
-
     if(errorMsg){
         return (
             <p>{errorMsg}</p>
