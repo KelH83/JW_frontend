@@ -1,18 +1,20 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import Students from './components/Students';
+import Header from './components/Header'
+import IndividualStudent from './components/IndividualStudent'
 import '@testing-library/jest-dom'
-import { waitFor } from "@testing-library/react";
 import { getStudents } from './firebase';
 
 
-
-it("Should say student records", () => {
+it("When page is Loading, loading text displays", () => {
     render(<Students />);
-    const headerMessage = screen.queryByText(/student records/i)
+    const loadingMessage = screen.getByText(/loading/i)
+    waitFor(() => expect(loadingMessage).toBeVisible());
+})
+
+it("Header text displays", () => {
+    render(<Header />);
+    const headerMessage = screen.getByText(/student records/i)
     waitFor(() => expect(headerMessage).toBeVisible());
 })
 
-it("Should return all students", () => {
-    const allStudents = getStudents()
-    waitFor(() => expect(allStudents).toBe(typeof 'array'));
-})
