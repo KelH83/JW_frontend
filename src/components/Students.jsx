@@ -41,14 +41,14 @@ const Students = () => {
 
     return(
         <>
-        <Link to={`/add_student`}><button className='add-student'>Add Student</button></Link>
+        <Link to={`/add_student`}><button className='add-student' data-testid="add-button">Add Student</button></Link>
         <Container  className='students-container' fluid>
         <Row>
-        {students.map((student) =>{
+        {students.map((student, index) =>{
             return(
-            <Col key={student.student_id} className='students-individual'>
+            <Col key={student.student_id} className='students-individual' data-testid={`student-${index}`}>
             <p className='student-info'>{student.name}</p>
-            <Link to={`/${student.student_id}`}><button className='buttons'>See more</button></Link>
+            <Link to={`/${student.student_id}`}><button className='buttons' data-testid={`see-more-${index}`}>See more</button></Link>
             </Col>
             )
         })}

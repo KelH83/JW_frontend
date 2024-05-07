@@ -7,4 +7,12 @@ export default defineConfig({
     open: true
     },
   plugins: [react()],
+  test: {
+    globals: true,
+    css: true,
+    environment: 'jsdom',
+    setupFiles: ['../JW_frontend/src/test/setup.js'],
+  },
 })
+
+
