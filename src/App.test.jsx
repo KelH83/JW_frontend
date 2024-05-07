@@ -1,9 +1,11 @@
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Students from './components/Students';
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, MemoryRouter} from 'react-router-dom'
+import IndividualStudent from './components/IndividualStudent';
+import userEvent from '@testing-library/user-event'
 
 
 
@@ -51,11 +53,17 @@ describe("Students component", () => {
       expect(addButton).toBeInTheDocument()
   })
 
-  it("Retrieves a students details", async () => {
+  it("Retrieves a single student", async () => {
     render(<MockStudents />)
     const student = await screen.findByTestId('student-0')
     expect(student).toBeInTheDocument()
-})
+  })
+
+  it("Retrieves all students", async () => {
+    render(<MockStudents />)
+    const allStudents = await screen.findAllByTestId(/student-/i)
+    expect(allStudents.length).toBe(5)
+  })
 
   it("has a see more button", async () => {
    render(<MockStudents />)
@@ -65,6 +73,29 @@ describe("Students component", () => {
 })
 
 
+describe("Individual Student component", () => {
+
+  // const MockIndividualStudent = () => {
+  //   return (
+  //     <BrowserRouter>
+  //       <Routes>
+  //       <Route path='/01' element={<IndividualStudent />} />
+  //       </Routes>
+  //     </BrowserRouter>
+  //   )
+  // }
+
+
+  it("Should display a loading message on the individual student page", async () => {
+    render(<Students />, {wrapper: BrowserRouter})
+    const user = userEvent.setup()
+    await user.click(screen.getByText(/see more/i))
+    expect(screen.getByText(/loading/i)).toBeInTheDocument()
+    
+  })
+
+
+})
 
 
 
